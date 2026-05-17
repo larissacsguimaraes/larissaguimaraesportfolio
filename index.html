@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
-        /* O reset básico para tirar margens do navegador */
+        /* Reset para eliminar margens e barras de rolagem horizontais indesejadas */
         body { 
             margin: 0; 
             padding: 0; 
-            background-color: #ffffff; /* Se quiser outra cor de fundo, é só mudar aqui */
+            background-color: #ffffff; 
+            overflow-x: hidden; 
         }
         
-        /* A caixa que vai segurar suas imagens */
+        /* Container estruturado para telas grandes */
         .container-da-pagina {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza a página se alguém abrir pelo computador */
             width: 100%;
+            max-width: 1920px; /* Trava de segurança para monitores Ultra-Wide (não distorce as imagens) */
+            margin: 0 auto; /* Mantém o layout centralizado em telas gigantes */
         }
 
-        /* O GRANDE SEGREDO: Como as imagens vão se comportar */
+        /* Comportamento Fluido das Imagens */
         .container-da-pagina img {
-            width: 100%; /* Garante que preencha a tela do celular */
-            max-width: 500px; /* Trava a largura no computador para não esticar demais e ficar feio */
-            display: block; /* Essa é a mágica que remove o espaço em branco entre as imagens! */
+            width: 100%; /* Expande a imagem para ocupar 100% da largura disponível */
+            height: auto; /* Mantém a proporção original, evitando achatamento */
+            display: block; /* Remove o espaço/quebra entre as fatias */
             margin: 0;
             padding: 0;
             border: none;
@@ -34,7 +36,6 @@
 <body>
 
     <div class="container-da-pagina">
-        <!-- O atributo 'alt' é importante para acessibilidade e carregamento -->
         <img src="images/1.png" alt="Apresentação Parte 1">
         <img src="images/2.png" alt="Apresentação Parte 2">
         <img src="images/3.png" alt="Apresentação Parte 3">
