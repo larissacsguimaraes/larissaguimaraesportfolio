@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* O reset básico para tirar margens do navegador */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #ffffff; /* Se quiser outra cor de fundo, é só mudar aqui */
+        }
+        
+        /* A caixa que vai segurar suas imagens */
+        .container-da-pagina {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a página se alguém abrir pelo computador */
+            width: 100%;
+        }
+
+        /* O GRANDE SEGREDO: Como as imagens vão se comportar */
+        .container-da-pagina img {
+            width: 100%; /* Garante que preencha a tela do celular */
+            max-width: 500px; /* Trava a largura no computador para não esticar demais e ficar feio */
+            display: block; /* Essa é a mágica que remove o espaço em branco entre as imagens! */
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-da-pagina">
+        <!-- O atributo 'alt' é importante para acessibilidade e carregamento -->
+        <img src="images/1.png" alt="Apresentação Parte 1">
+        <img src="images/2.png" alt="Apresentação Parte 2">
+        <img src="images/3.png" alt="Apresentação Parte 3">
+        <img src="images/4.png" alt="Apresentação Parte 4">
+        <img src="images/5.png" alt="Apresentação Parte 5">
+        <img src="images/6.png" alt="Apresentação Parte 6">
+        <img src="images/7.png" alt="Apresentação Parte 7">
+        <img src="images/8.png" alt="Apresentação Parte 8">
+        <img src="images/9.png" alt="Apresentação Parte 9">
+        <img src="images/10.png" alt="Apresentação Parte 10">
+    </div>
+
+</body>
+</html>
